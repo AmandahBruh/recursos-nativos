@@ -34,6 +34,7 @@ export default function ContactInfo() {
           style={{ flex: 1, gap: 10 }}
           data={contacts}
           keyExtractor={(item) => item.id.toString()}
+
         />
       ) : (
         <Text>Carregando...</Text>

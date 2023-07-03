@@ -10,7 +10,7 @@ export default function AgendamentoNotifi({ navigation }) {
   const [expoToken, setExpoToken] = useState("");
   const [title, SetTitle] = useState("");
   const [description, SetDescription] = useState("");
-
+  const [segundos, SetSegundos] = useState(3);
 
   async function Notificar() {
     const token = await Notifications.scheduleNotificationAsync({
@@ -19,7 +19,7 @@ export default function AgendamentoNotifi({ navigation }) {
         subtitle: description,
         body: description,
       },
-      trigger: { seconds: 10 },
+      trigger: { seconds: parseInt(segundos) },
     });
     setExpoToken(token);
   }
@@ -31,6 +31,7 @@ export default function AgendamentoNotifi({ navigation }) {
         <Text> Escreva uma notificação para você receber em 10 segundos </Text>
         <TextInput label="Titulo" value={title} onChangeText={SetTitle}></TextInput>
         <TextInput label="Descrição" value={description} onChangeText={SetDescription}></TextInput>
+        <TextInput type="Number" label="Segundos" value={segundos} onChangeText={SetSegundos}></TextInput>
         <Button style={styles.boxBtn}
          title="Enviar Notificação" onPress={Notificar}>
         </Button>

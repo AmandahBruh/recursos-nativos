@@ -17,7 +17,6 @@ export default function RootNavigation() {
       <Stack.Navigator>
         <Stack.Screen name="AgendamentoNotifi" component={AgendamentoNotifi} />
         <Stack.Screen name="ScreenOrientationScreen" component={ScreenOrientationScreen} />
-        <Stack.Screen name="BatteryInfo" component={BatteryInfo} />
         <Stack.Screen name="DeviceInfo" component={DeviceInfoScreen} />
         <Stack.Screen name="ButtonScreen" component={ButtonScreen} />
       </Stack.Navigator>

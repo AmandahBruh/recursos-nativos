@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import * as Battery from 'expo-battery';
 import { useEffect, useState } from "react";
-import styles from "../utils/styles";
+
 
 export default function BatteryInfo({navigation}) {
     const [nivelBateria, setNivelBateria] = useState();
