@@ -20,11 +20,11 @@ export default function Header({ title }) {
 
     return (
         <View style={{
-            backgroundColor: nivelBateria <= 100 && nivelBateria >= 80 ? 'green' : nivelBateria <= 79 && nivelBateria >= 50 ? '#D6A400' : nivelBateria <= 49 && nivelBateria >= 30 ? 'orange' : '#AE2400', paddingTop: 30, paddingBottom: 5,
+            backgroundColor: nivelBateria <= 100 && nivelBateria >= 60 ? 'green' : nivelBateria <= 59 && nivelBateria >= 30 ? '#D6A400' : nivelBateria <= 29 && nivelBateria >= 5 ? 'orange' : '#B8010E', paddingTop: 30, paddingBottom: 5,
             paddingHorizontal: 5,
         }}>
             <Text style={styles.headerTextStyle}>{title}</Text>
-            <Pressable onPress={atualizarTudo} style={{ backgroundColor: nivelBateria <= 100 && nivelBateria >= 80 ? '#44E100' : nivelBateria <= 79 && nivelBateria >= 50 ? '#E6E645' : nivelBateria <= 49 && nivelBateria >= 30 ? '#E6A845w' : '#E66545', padding: 12, borderRadius: 2, borderColor: "black"}}><Text style={{ fontSize: 16,
+            <Pressable onPress={atualizarTudo} style={{ backgroundColor: nivelBateria <= 100 && nivelBateria >= 60 ? '#44E100' : nivelBateria <= 59 && nivelBateria >= 30 ? '#E6E645' : nivelBateria <= 29 && nivelBateria >= 5 ? '#B87100' : '#F50213', padding: 12, borderRadius: 2, borderColor: "black"}}><Text style={{ fontSize: 16,
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
