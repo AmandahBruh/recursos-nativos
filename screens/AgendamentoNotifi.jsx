@@ -28,10 +28,10 @@ export default function AgendamentoNotifi({ navigation }) {
     <ScrollView style={styles.container}>
         <Header style={styles.title} title="Agendamento de Notificações" />
 
-        <Text> Escreva uma notificação para você receber em 10 segundos </Text>
+        <Text> Escreva uma notificação para você receber </Text>
         <TextInput label="Titulo" value={title} onChangeText={SetTitle}></TextInput>
         <TextInput label="Descrição" value={description} onChangeText={SetDescription}></TextInput>
-        <TextInput type="Number" label="Segundos" value={segundos} onChangeText={SetSegundos}></TextInput>
+        <TextInput type="Number" label="Quanto tempo vai demorar em segundos" value={segundos} onChangeText={SetSegundos}></TextInput>
         <Button style={styles.boxBtn}
          title="Enviar Notificação" onPress={Notificar}>
         </Button>
