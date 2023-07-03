@@ -1,13 +1,14 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import * as ScreenOrientation from 'expo-screen-orientation';       
 import { Button } from "react-native";
 import { useState } from "react";
 
+const [cor, setCor] = ("");
 
 async function Default(){
-    await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.DEFAULT);
+  await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.DEFAULT);
 }
 
 async function DeitarDireita(){

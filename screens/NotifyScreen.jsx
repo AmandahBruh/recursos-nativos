@@ -6,6 +6,7 @@ import * as Device from "expo-device";
 import * as Battery from "expo-battery";
 import { useEffect, useState } from "react";
 import BatteryInfo from "./BatteryInfo";
+import styles from "../utils/styles";
 
 export default function NotifyScreen({ navigation }) {
   const [expoToken, setExpoToken] = useState("");
@@ -38,7 +39,7 @@ export default function NotifyScreen({ navigation }) {
   async function lerNotificacao() {
     const exemplo = await Notifications.getLastNotificationResponseAsync();
     console.log(exemplo.notification.request.identifier);
-    alert("Notificação", exemplo.notification.request.identifier);
+    alert(exemplo.notification.request.identifier);
   }
 
   //bateria
@@ -104,48 +105,3 @@ export default function NotifyScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    gap: 15,
-  },
-
-  title: {
-    color: "#fff",
-    backgroundColor: "#606",
-    padding: 10,
-    textAlign: "center",
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-
-  textBox: {
-    gap: 10,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-
-  purpleText: {
-    color: "#fff",
-    backgroundColor: "#969",
-    // textAlign: "center",
-    fontSize: 16,
-    fontWeight: "bold",
-    width: 230,
-    height: 60,
-    padding: 10,
-  },
-
-  boxBtn: {
-    backgroundColor: "#7C7B7E",
-    alignItems: "center",
-    paddingVertical: 10,
-    marginTop: 20,
-  },
-
-  textBtn: {
-    backgroundColor: "#4C9BCC",
-    paddingVertical: 5,
-    paddingHorizontal: 90,
-    color: "#fff",
-  },
-});

@@ -20,7 +20,8 @@
     "react-native-paper": "^5.8.0",
     "react-native-vector-icons": "^9.2.0",
     "expo-screen-orientation": "~5.1.1",
-    "expo-notifications": "~0.18.1"
+    "expo-notifications": "~0.18.1",
+    "expo-contacts": "~12.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

@@ -1,17 +1,9 @@
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, Button } from "react-native";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import * as Battery from 'expo-battery';
 import { useEffect, useState } from "react";
-
-export const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-});
+import styles from "../utils/styles";
 
 export default function BatteryInfo({navigation}) {
     const [nivelBateria, setNivelBateria] = useState();

@@ -33,6 +33,10 @@
       {
         "initialOrientation": "DEFAULT"
       }
-    ]
+    ],
+    "expo-contacts",
+    {
+      "contactPermissions": "Allow $(PRODUCT_NAME) to access your contacts?"
+    }
   ]
 }

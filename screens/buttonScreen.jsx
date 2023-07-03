@@ -2,17 +2,11 @@ import { useEffect, useState } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 import * as Device from "expo-device";
 import * as Battery from 'expo-battery';
+import styles from "../utils/styles";
+import Header from "../components/Header";
 
-export const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-});
+export default function ButtonScreen({ navigation }){
 
-export default function ButtonScreen(){
     const [nomeDispositivo, setNomeDispositivo] = useState(); 
     const [memoria, setMemoria] = useState();
     const [versao, setVersao] = useState();
@@ -45,6 +39,7 @@ export default function ButtonScreen(){
 
     return(
         <View style={styles.container}>
+             <Header style={styles.title} title="Button Screen" />
             
             <Button onPress={ mostrar } title="APARECER"
             >
