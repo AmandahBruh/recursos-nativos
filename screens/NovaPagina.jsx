@@ -18,7 +18,7 @@ export default function NovaPagina() {
         rotateValueHolder.setValue(0);
         Animated.timing(rotateValueHolder, {
           toValue: 1,
-          duration: 3000,
+          duration: 100,
           easing: Easing.linear,
           useNativeDriver: false,
         }).start(() => startImageRotateFunction());
